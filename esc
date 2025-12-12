@@ -1,0 +1,273 @@
+#!/bin/bash
+
+# Espanso Shortcode Manager
+# Manages shortcuts in ~/.config/espanso/match/base.yml
+
+CONFIG_FILE="$HOME/.config/espanso/match/base.yml"
+TEMP_FILE="/tmp/espanso_temp_$$.yml"
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+AQUA='\033[0;36m'
+YELLOW='\033[1;33m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
+# Ensure config directory exists
+setup_config() {
+    mkdir -p "$(dirname "$CONFIG_FILE")"
+    
+    if [[ ! -f "$CONFIG_FILE" ]]; then
+        cat > "$CONFIG_FILE" << 'EOF'
+matches: []
+EOF
+    fi
+}
+
+# Parse YAML and extract triggers
+get_triggers() {
+    grep -E '^\s*-\s+trigger:' "$CONFIG_FILE" | sed 's/.*trigger:\s*//' | sed "s/'//g" | sed 's/"//g'
+}
+
+# Get replacement for a trigger
+get_replacement() {
+    local trigger="$1"
+    local in_match=0
+    local replace=""
+    
+    while IFS= read -r line; do
+        if [[ $line =~ -\ trigger:\ *\"?$trigger\"? ]]; then
+            in_match=1
+        elif [[ $in_match -eq 1 ]]; then
+            if [[ $line =~ replace: ]]; then
+                replace=$(echo "$line" | sed 's/.*replace:\s*//' | sed "s/'//g" | sed 's/"//g')
+                echo "$replace"
+                return 0
+            fi
+        fi
+    done < "$CONFIG_FILE"
+}
+
+# Display the menu
+show_menu() {
+    clear
+    echo -e "${AQUA}${BOLD}╔════════════════════════════════════════╗${NC}"
+    echo -e "${AQUA}${BOLD}║       Espanso Shortcode Manager        ║${NC}"
+    echo -e "${AQUA}${BOLD}╚════════════════════════════════════════╝${NC}"
+    echo ""
+    echo "1) Add new shortcode"
+    echo "2) View all shortcodes"
+    echo "3) Delete a shortcode"
+    echo "4) Exit"
+    echo ""
+}
+
+# Display all shortcodes
+view_shortcuts() {
+    clear
+    echo -e "${AQUA}${BOLD}╔════════════════════════════════════════╗${NC}"
+    echo -e "${AQUA}${BOLD}║           Current Shortcodes           ║${NC}"
+    echo -e "${AQUA}${BOLD}╚════════════════════════════════════════╝${NC}"
+    echo ""
+    
+    local count=0
+    local in_match=0
+    local current_trigger=""
+    local current_replace=""
+    
+    while IFS= read -r line; do
+        if [[ $line =~ -\ trigger: ]]; then
+            in_match=1
+            current_trigger=$(echo "$line" | sed 's/.*trigger:\s*//' | sed "s/'//g" | sed 's/"//g')
+        elif [[ $in_match -eq 1 && $line =~ replace: ]]; then
+            current_replace=$(echo "$line" | sed 's/.*replace:\s*//' | sed "s/'//g" | sed 's/"//g')
+            printf "  ${GREEN}%-1s${NC} → %s\n" "$current_trigger" "$current_replace"
+            ((count++))
+            in_match=0
+        fi
+    done < "$CONFIG_FILE"
+    
+    if [[ $count -eq 0 ]]; then
+        echo -e "  ${YELLOW}No shortcuts found${NC}"
+    else
+        echo ""
+        echo -e "  ${GREEN}Total: $count shortcodes${NC}"
+    fi
+    
+    echo ""
+    echo -n "Press Enter to continue..."
+    read
+}
+
+# Add new shortcode
+add_shortcode() {
+    clear
+    echo -e "${AQUA}${BOLD}╔════════════════════════════════════════╗${NC}"
+    echo -e "${AQUA}${BOLD}║           Add New Shortcode            ║${NC}"
+    echo -e "${AQUA}${BOLD}╚════════════════════════════════════════╝${NC}"
+    echo ""
+    
+    read -p "Trigger (e.g., 'email'): " trigger
+    
+    if [[ -z "$trigger" ]]; then
+        echo -e "${RED}Error: Trigger cannot be empty${NC}"
+        return 1
+    fi
+    
+    # Check if trigger already exists
+    if grep -q "trigger: ['\"]$trigger['\"]" "$CONFIG_FILE"; then
+        echo -e "${RED}Error: Shortcode '$trigger' already exists${NC}"
+        return 1
+    fi
+    
+    read -p "Replacement: " replace
+    
+    if [[ -z "$replace" ]]; then
+        echo -e "${RED}Error: Replacement cannot be empty${NC}"
+        return 1
+    fi
+    
+    # Add the shortcode
+    if add_to_yaml "$trigger" "$replace"; then
+        echo -e "${GREEN}✓ Added '$trigger' → '$replace'${NC}"
+    else
+        echo -e "${RED}Error: Failed to add shortcode${NC}"
+        return 1
+    fi
+}
+
+# Add entry to YAML file
+add_to_yaml() {
+    local trigger="$1"
+    local replace="$2"
+    
+    # Check if matches is empty array
+    if grep -q "matches: \[\]" "$CONFIG_FILE"; then
+        sed -i "s/matches: \[\]/matches:\n  - trigger: '$trigger'\n    replace: '$replace'\n    form: text/" "$CONFIG_FILE"
+    else
+        # Append new match at the bottom of the matches list (preserve existing order)
+        # Ensure file ends with a newline then append the new entry
+        printf "\n" >> "$CONFIG_FILE"
+        cat >> "$CONFIG_FILE" <<EOF
+  - trigger: '$trigger'
+    replace: '$replace'
+    form: text
+EOF
+    fi
+    
+    return 0
+}
+
+# Delete shortcode
+delete_shortcode() {
+    clear
+    echo -e "${AQUA}${BOLD}╔════════════════════════════════════════╗${NC}"
+    echo -e "${AQUA}${BOLD}║            Delete Shortcode            ║${NC}"
+    echo -e "${AQUA}${BOLD}╚════════════════════════════════════════╝${NC}"
+    echo ""
+    
+    local triggers=()
+    local count=0
+    
+    while IFS= read -r trigger; do
+        triggers+=("$trigger")
+        ((count++))
+    done < <(get_triggers)
+    
+    if [[ $count -eq 0 ]]; then
+        echo -e "${YELLOW}No shortcuts to delete${NC}"
+        return
+    fi
+    
+    echo "Select shortcode to delete:"
+    echo ""
+    
+    for i in "${!triggers[@]}"; do
+        printf "  %d) %s\n" $((i+1)) "${triggers[$i]}"
+    done
+    
+    echo ""
+    read -p "Enter number (0 to cancel): " choice
+    
+    if [[ $choice -eq 0 ]]; then
+        return
+    fi
+    
+    if [[ $choice -ge 1 && $choice -le $count ]]; then
+        local index=$((choice - 1))
+        local trigger_to_delete="${triggers[$index]}"
+        
+        # Remove the shortcode from YAML
+        delete_from_yaml "$trigger_to_delete"
+        
+        echo -e "${GREEN}✓ Deleted '$trigger_to_delete'${NC}"
+    else
+        echo -e "${RED}Invalid selection${NC}"
+        
+    fi
+}
+
+# Delete from YAML
+delete_from_yaml() {
+    local trigger="$1"
+    local in_match=0
+    local line_num=0
+    local start_line=0
+    local end_line=0
+    
+    # Find the line numbers to delete
+    while IFS= read -r line; do
+        ((line_num++))
+        
+        if [[ $line =~ trigger:\ *\'?$trigger\'? ]]; then
+            start_line=$line_num
+            in_match=1
+        elif [[ $in_match -eq 1 && $line =~ ^[[:space:]]*- ]]; then
+            end_line=$((line_num - 1))
+            break
+        elif [[ $in_match -eq 1 && $line =~ ^[a-z] ]]; then
+            end_line=$((line_num - 1))
+            break
+        fi
+    done < "$CONFIG_FILE"
+    
+    if [[ $start_line -gt 0 ]]; then
+        if [[ $end_line -eq 0 ]]; then
+            end_line=$line_num
+        fi
+        
+        sed -i "${start_line},${end_line}d" "$CONFIG_FILE"
+        
+        # Clean up empty matches array
+        if ! grep -q "^\s*-" "$CONFIG_FILE"; then
+            sed -i "s/^matches:.*/matches: []/" "$CONFIG_FILE"
+        fi
+    fi
+}
+
+# Main loop
+main() {
+    setup_config
+    
+    while true; do
+        show_menu
+        read -p "Choose an option: " choice
+        
+        case $choice in
+            1) add_shortcode ;;
+            2) view_shortcuts ;;
+            3) delete_shortcode ;;
+            4) 
+                echo -e "${GREEN}Goodbye!${NC}"
+                exit 0
+                ;;
+            *)
+                echo -e "${RED}Invalid option${NC}"
+                ;;
+        esac
+    done
+}
+
+# Run main
+main
