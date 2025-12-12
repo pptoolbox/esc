@@ -1,0 +1,2 @@
+# esc
+Espanso Shortcode Manager
