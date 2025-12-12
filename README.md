@@ -18,7 +18,7 @@ Install
 1. Run the command below (as root), or install the `esc` package manually.
 
 ```bash
-sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoobox/esc/main/install.sh)"
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
 ```
 
 2. Ensure Espanso's config directory exists and Espanso is running. The script writes to:
