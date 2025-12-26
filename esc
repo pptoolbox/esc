@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Espanso Shortcode Manager
-# Manages shortcuts in ~/.config/espanso/match/base.yml
+# Manages shortcuts in ~/.config/espanso/match/esc.yml
 
-CONFIG_FILE="$HOME/.config/espanso/match/base.yml"
+CONFIG_FILE="$HOME/.config/espanso/match/esc.yml"
 TEMP_FILE="/tmp/espanso_temp_$$.yml"
 
 # Colors

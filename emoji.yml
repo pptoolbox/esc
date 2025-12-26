@@ -2885,7 +2885,7 @@ matches:
     replace: ♻️
   - trigger: ".environment"
     replace: ♻️
-  - trigger: ".white check mark"
+  - trigger: ".check mark button"
     replace: ✅
   - trigger: ".u6307"
     replace: "\U0001F22F️"
@@ -2895,8 +2895,10 @@ matches:
     replace: ❇️
   - trigger: ".eight spoked asterisk"
     replace: ✳️
-  - trigger: ".negative squared cross mark"
+  - trigger: ".cross mark button"
     replace: ❎
+  - trigger: ".cross mark"
+    replace: ❌
   - trigger: ".globe with meridians"
     replace: "\U0001F310"
   - trigger: ".global"
@@ -3125,7 +3127,7 @@ matches:
     replace: "\U0001F51D"
   - trigger: ".soon"
     replace: "\U0001F51C"
-  - trigger: ".heavy check mark"
+  - trigger: ".check mark"
     replace: ✔️
   - trigger: ".ballot box with check"
     replace: ☑️
