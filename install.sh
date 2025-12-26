@@ -12,10 +12,9 @@ then
     else
         # Install esc
         echo "Installing Espanso Shortcode Manager..."
-        curl -fsSl https://raw.githubusercontent.com/pptoolbox/esc/main/esc -o /usr/local/bin/esc
-        chmod +x /usr/local/bin/esc
-        curl -fsSl https://raw.githubusercontent.com/pptoolbox/esc/main/emoji.yml -o /home/$USER/.config/espanso/match/emoji.yml
-        chown $USER:$USER /home/$USER/.config/espanso/match/emoji.yml
+        sudo curl -fsSLo /usr/local/bin/esc https://raw.githubusercontent.com/pptoolbox/esc/main/esc
+        sudo chmod +x /usr/local/bin/esc
+        curl -fsSlo /home/$USER/.config/espanso/match/emoji.yml https://raw.githubusercontent.com/pptoolbox/esc/main/emoji.yml
         echo "Espanso Shortcode Manager installed successfully."
         exit 0
     fi
