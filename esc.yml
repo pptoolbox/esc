@@ -1,0 +1,20 @@
+matches:
+  - trigger: 'myn'
+    replace: 'Preetam Paul'
+    form: text
+
+  - trigger: 'mno'
+    replace: '6033379371'
+    form: text
+
+  - trigger: 'pmail'
+    replace: 'mr.preetampaul@gmail.com'
+    form: text
+
+  - trigger: 'smail'
+    replace: 'preetampaul221@gmail.com'
+    form: text
+
+  - trigger: 'umail'
+    replace: 'unknownuseremail512@gmail.com'
+    form: text
