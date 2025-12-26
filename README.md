@@ -4,7 +4,7 @@ A small interactive TUI to manage Espanso shortcodes on **Linux**.
 Overview
 --------
 
-`esc` is a lightweight interactive script that helps you add, list, and remove Espanso shortcodes from your Espanso `base.yml` matches file. It's designed to be simple, POSIX-compatible, and safe to use from a terminal.
+`esc` is a lightweight interactive script that helps you add, list, and remove Espanso shortcodes from your Espanso `esc.yml` matches file. It's designed to be simple, POSIX-compatible, and safe to use from a terminal.
 
 Requirements
 ------------
@@ -15,16 +15,10 @@ Requirements
 Install
 -------
 
-1. Run the command below (as root), or install the `esc` package manually.
+Run the command below, or install the `esc` package manually.
 
 ```bash
-sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
-```
-
-2. Ensure Espanso's config directory exists and Espanso is running. The script writes to:
-
-```
-$HOME/.config/espanso/match/base.yml
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
 ```
 
 Usage
@@ -41,12 +35,46 @@ When launched you'll see a simple menu to:
 - View all shortcodes
 - Delete a shortcode
 
+Emoji Support
+-----
+
+`esc` comes with a pre-loaded emoji shortcode library (`emoji.yml`) that provides quick access to hundreds of emojis using text triggers. Instead of copying/pasting emojis, you can use simple text shortcuts.
+
+**Emoji triggers start with a dot (`.`)**
+
+For example:
+- `.happy` → 😀
+- `.love` → ❤️
+- `.100` → 💯
+- `.thumbsup` → 👍
+- `.party` → 🎉
+- `.rocket` → 🚀
+- `.thinking` → 🤔
+- `.fire` → 🔥
+- `.star` → ⭐
+
+You can also use aliases for the same emoji:
+- `.joy` or `.tears` → 😂 (same emoji, different trigger)
+- `.grinning` or `.happy` → 😀
+- `.+1` or `.thumbsup` → 👍
+
+The emoji library includes triggers for:
+- **Faces & emotions**: happy, sad, angry, confused, thinking, etc.
+- **Gestures & hands**: thumbsup, clap, pray, handshake, etc.
+- **Symbols & objects**: fire, star, heart, diamond, etc.
+- **Activities & nature**: party, rocket, tada, etc.
+
+To use an emoji in a text editor or application that supports Espanso:
+1. Type the emoji trigger (e.g., `.happy`)
+2. Press the configured Espanso activation key (usually spacebar)
+3. The emoji appears instantly
+
 Behavior notes
 --------------
 
 - When adding a shortcode the script will initialize `matches: []` if no matches are present.
 - Deleting a shortcode removes the matching entry and will restore `matches: []` when no matches remain.
-- The script edits your Espanso YAML in-place; consider backing up `base.yml` before bulk changes.
+- The script edits your Espanso YAML in-place; consider backing up `esc.yml` before bulk changes.
 
 Examples
 --------
