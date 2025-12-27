@@ -1,57 +1,34 @@
 matches:
+# Smileys & Emotions
   - trigger: ".100."
-    replace: "💯"
-  - trigger: ".score."
-    replace: "💯"
-  - trigger: ".perfect."
     replace: "💯"
   - trigger: ".1234."
     replace: "🔢"
-  - trigger: ".numbers."
-    replace: "🔢"
-  - trigger: ".grinning."
-    replace: "😀"
   - trigger: ".happy."
     replace: "😀"
-  - trigger: ".smiley."
-    replace: "😃"
-  - trigger: ".haha."
-    replace: "😃"
   - trigger: ".smile."
-    replace: "😄"
-  - trigger: ".laugh."
-    replace: "😄"
-  - trigger: ".pleased."
     replace: "😄"
   - trigger: ".grin."
     replace: "😁"
-  - trigger: ".laughing."
-    replace: "😆"
-  - trigger: ".satisfied."
-    replace: "😆"
-  - trigger: ".laughing."
+  - trigger: ".laugh."
     replace: "😆"
   - trigger: ".sweat smile."
     replace: "😅"
-  - trigger: ".hot."
-    replace: "😅"
-  - trigger: ".joy."
+  - trigger: ".haha."
     replace: "😂"
-  - trigger: ".tears."
-    replace: "😂"
-  - trigger: ".rofl."
+  - trigger: ".hahaha."
     replace: "🤣"
   - trigger: ".lol."
     replace: "🤣"
   - trigger: ".relaxed."
-    replace: ☺️
+    replace: "☺️"
   - trigger: ".blush."
     replace: "😊"
   - trigger: ".proud."
     replace: "😊"
   - trigger: ".innocent."
     replace: "😇"
-  - trigger: ".slightly smiling face."
+  - trigger: ".smileyface."
     replace: "🙂"
   - trigger: ".upside down face."
     replace: "🙃"
@@ -132,7 +109,7 @@ matches:
   - trigger: ".slightly frowning face."
     replace: "🙁"
   - trigger: ".frowning face."
-    replace: ☹️
+    replace: "☹️"
   - trigger: ".persevere."
     replace: "😣"
   - trigger: ".struggling."
@@ -310,9 +287,9 @@ matches:
   - trigger: ".poison."
     replace: "💀"
   - trigger: ".skull and crossbones."
-    replace: ☠️
+    replace: "☠️"
   - trigger: ".pirate."
-    replace: ☠️
+    replace: "☠️"
   - trigger: ".alien."
     replace: "👽"
   - trigger: ".ufo."
@@ -345,6 +322,8 @@ matches:
     replace: "😿"
   - trigger: ".pouting cat."
     replace: "😾"
+
+# People & Body
   - trigger: ".open hands."
     replace: "👐"
   - trigger: ".raised hands."
@@ -400,13 +379,13 @@ matches:
   - trigger: ".fist oncoming."
     replace: "👊"
   - trigger: ".fist raised."
-    replace: ✊
+    replace: "✊"
   - trigger: ".fist."
-    replace: ✊
+    replace: "✊"
   - trigger: ".power."
-    replace: ✊
+    replace: "✊"
   - trigger: ".fist raised."
-    replace: ✊
+    replace: "✊"
   - trigger: ".fist left."
     replace: "🤛"
   - trigger: ".fist right."
@@ -418,11 +397,11 @@ matches:
   - trigger: ".hopeful."
     replace: "🤞"
   - trigger: ".v."
-    replace: ✌️
+    replace: "✌️"
   - trigger: ".victory."
-    replace: ✌️
+    replace: "✌️"
   - trigger: ".peace."
-    replace: ✌️
+    replace: "✌️"
   - trigger: ".metal."
     replace: "🤘"
   - trigger: ".ok hand."
@@ -436,17 +415,17 @@ matches:
   - trigger: ".point down."
     replace: "👇"
   - trigger: ".point up."
-    replace: ☝️
+    replace: "☝️"
   - trigger: ".hand."
-    replace: ✋
+    replace: "✋"
   - trigger: ".raised hand."
-    replace: ✋
+    replace: "✋"
   - trigger: ".highfive."
-    replace: ✋
+    replace: "✋"
   - trigger: ".stop."
-    replace: ✋
+    replace: "✋"
   - trigger: ".hand."
-    replace: ✋
+    replace: "✋"
   - trigger: ".raised back of hand."
     replace: "🤚"
   - trigger: ".raised hand with fingers splayed."
@@ -480,7 +459,7 @@ matches:
   - trigger: ".middle finger."
     replace: "🖕"
   - trigger: ".writing hand."
-    replace: ✍️
+    replace: "✍️"
   - trigger: ".selfie."
     replace: "🤳"
   - trigger: ".nail care."
@@ -953,6 +932,8 @@ matches:
     replace: "👨‍👦‍👦"
   - trigger: ".family man girl girl."
     replace: "👨‍👧‍👧"
+
+# Clothing & Accessories
   - trigger: ".womans clothes."
     replace: "👚"
   - trigger: ".shirt."
@@ -1018,7 +999,7 @@ matches:
   - trigger: ".queen."
     replace: "👑"
   - trigger: ".rescue worker helmet."
-    replace: ⛑
+    replace: "⛑"
   - trigger: ".school satchel."
     replace: "🎒"
   - trigger: ".pouch."
@@ -1042,7 +1023,9 @@ matches:
   - trigger: ".rain."
     replace: "🌂"
   - trigger: ".open umbrella."
-    replace: ☂️
+    replace: "☂️"
+
+# Animals & Nature
   - trigger: ".dog."
     replace: "🐶"
   - trigger: ".pet."
@@ -1266,7 +1249,7 @@ matches:
   - trigger: ".herb."
     replace: "🌿"
   - trigger: ".shamrock."
-    replace: ☘️
+    replace: "☘️"
   - trigger: ".four leaf clover."
     replace: "🍀"
   - trigger: ".bamboo."
@@ -1360,19 +1343,19 @@ matches:
   - trigger: ".dizzy."
     replace: "💫"
   - trigger: ".star."
-    replace: ⭐️
+    replace: "⭐️"
   - trigger: ".star2."
     replace: "🌟"
   - trigger: ".sparkles."
-    replace: ✨
+    replace: "✨"
   - trigger: ".shiny."
-    replace: ✨
+    replace: "✨"
   - trigger: ".zap."
-    replace: ⚡️
+    replace: "⚡️"
   - trigger: ".lightning."
-    replace: ⚡️
+    replace: "⚡️"
   - trigger: ".thunder."
-    replace: ⚡️
+    replace: "⚡️"
   - trigger: ".fire."
     replace: "🔥"
   - trigger: ".burn."
@@ -1386,13 +1369,13 @@ matches:
   - trigger: ".boom."
     replace: "💥"
   - trigger: ".comet."
-    replace: ☄
+    replace: "☄"
   - trigger: ".sunny."
-    replace: ☀️
+    replace: "☀️"
   - trigger: ".sun behind small cloud."
     replace: "🌤"
   - trigger: ".partly sunny."
-    replace: ⛅️
+    replace: "⛅️"
   - trigger: ".sun behind large cloud."
     replace: "🌥"
   - trigger: ".sun behind rain cloud."
@@ -1400,25 +1383,25 @@ matches:
   - trigger: ".rainbow."
     replace: "🌈"
   - trigger: ".cloud."
-    replace: ☁️
+    replace: "☁️"
   - trigger: ".cloud with rain."
     replace: "🌧"
   - trigger: ".cloud with lightning and rain."
-    replace: ⛈
+    replace: "⛈"
   - trigger: ".cloud with lightning."
     replace: "🌩"
   - trigger: ".cloud with snow."
     replace: "🌨"
   - trigger: ".snowman with snow."
-    replace: ☃️
+    replace: "☃️"
   - trigger: ".winter."
-    replace: ☃️
+    replace: "☃️"
   - trigger: ".snowman."
-    replace: ⛄️
+    replace: "⛄️"
   - trigger: ".snowflake."
-    replace: ❄️
+    replace: "❄️"
   - trigger: ".cold."
-    replace: ❄️
+    replace: "❄️"
   - trigger: ".wind face."
     replace: "🌬"
   - trigger: ".dash."
@@ -1442,7 +1425,9 @@ matches:
   - trigger: ".sweat drops."
     replace: "💦"
   - trigger: ".umbrella."
-    replace: ☔️
+    replace: "☔️"
+
+# Food & Drink
   - trigger: ".green apple."
     replace: "🍏"
   - trigger: ".fruit."
@@ -1626,11 +1611,11 @@ matches:
   - trigger: ".milk."
     replace: "🍼"
   - trigger: ".coffee."
-    replace: ☕️
+    replace: "☕️"
   - trigger: ".cafe."
-    replace: ☕️
+    replace: "☕️"
   - trigger: ".espresso."
-    replace: ☕️
+    replace: "☕️"
   - trigger: ".tea."
     replace: "🍵"
   - trigger: ".green."
@@ -1681,16 +1666,18 @@ matches:
     replace: "🍽"
   - trigger: ".dinner."
     replace: "🍽"
+
+# Activities & Sports
   - trigger: ".soccer."
-    replace: ⚽️
+    replace: "⚽️"
   - trigger: ".sports."
-    replace: ⚽️
+    replace: "⚽️"
   - trigger: ".basketball."
     replace: "🏀"
   - trigger: ".football."
     replace: "🏈"
   - trigger: ".baseball."
-    replace: ⚾️
+    replace: "⚾️"
   - trigger: ".tennis."
     replace: "🎾"
   - trigger: ".volleyball."
@@ -1716,7 +1703,7 @@ matches:
   - trigger: ".cricket."
     replace: "🏏"
   - trigger: ".golf."
-    replace: ⛳️
+    replace: "⛳️"
   - trigger: ".bow and arrow."
     replace: "🏹"
   - trigger: ".archery."
@@ -1728,13 +1715,13 @@ matches:
   - trigger: ".martial arts uniform."
     replace: "🥋"
   - trigger: ".ice skate."
-    replace: ⛸
+    replace: "⛸"
   - trigger: ".skating."
-    replace: ⛸
+    replace: "⛸"
   - trigger: ".ski."
     replace: "🎿"
   - trigger: ".skier."
-    replace: ⛷
+    replace: "⛷"
   - trigger: ".snowboarder."
     replace: "🏂"
   - trigger: ".weight lifting woman."
@@ -1754,9 +1741,9 @@ matches:
   - trigger: ".man cartwheeling."
     replace: "🤸‍♂"
   - trigger: ".basketball woman."
-    replace: ⛹️‍♀️
+    replace: "⛹️‍♀️"
   - trigger: ".basketball man."
-    replace: ⛹
+    replace: "⛹"
   - trigger: ".woman playing handball."
     replace: "🤾‍♀"
   - trigger: ".man playing handball."
@@ -1917,6 +1904,8 @@ matches:
     replace: "🎮"
   - trigger: ".slot machine."
     replace: "🎰"
+
+# Travel & Places
   - trigger: ".car."
     replace: "🚗"
   - trigger: ".red car."
@@ -2008,7 +1997,7 @@ matches:
   - trigger: ".flight."
     replace: "🛩"
   - trigger: ".airplane."
-    replace: ✈️
+    replace: "✈️"
   - trigger: ".flight departure."
     replace: "🛫"
   - trigger: ".flight arrival."
@@ -2026,11 +2015,11 @@ matches:
   - trigger: ".canoe."
     replace: "🛶"
   - trigger: ".boat."
-    replace: ⛵️
+    replace: "⛵️"
   - trigger: ".sailboat."
-    replace: ⛵️
+    replace: "⛵️"
   - trigger: ".boat."
-    replace: ⛵️
+    replace: "⛵️"
   - trigger: ".motor boat."
     replace: "🛥"
   - trigger: ".speedboat."
@@ -2040,17 +2029,17 @@ matches:
   - trigger: ".cruise."
     replace: "🛳"
   - trigger: ".ferry."
-    replace: ⛴
+    replace: "⛴"
   - trigger: ".ship."
     replace: "🚢"
   - trigger: ".anchor."
-    replace: ⚓️
+    replace: "⚓️"
   - trigger: ".construction."
     replace: "🚧"
   - trigger: ".wip."
     replace: "🚧"
   - trigger: ".fuelpump."
-    replace: ⛽️
+    replace: "⛽️"
   - trigger: ".busstop."
     replace: "🚏"
   - trigger: ".vertical traffic light."
@@ -2070,7 +2059,7 @@ matches:
   - trigger: ".statue of liberty."
     replace: "🗽"
   - trigger: ".fountain."
-    replace: ⛲️
+    replace: "⛲️"
   - trigger: ".tokyo tower."
     replace: "🗼"
   - trigger: ".european castle."
@@ -2086,13 +2075,13 @@ matches:
   - trigger: ".carousel horse."
     replace: "🎠"
   - trigger: ".parasol on ground."
-    replace: ⛱
+    replace: "⛱"
   - trigger: ".beach umbrella."
     replace: "🏖"
   - trigger: ".desert island."
     replace: "🏝"
   - trigger: ".mountain."
-    replace: ⛰
+    replace: "⛰"
   - trigger: ".mountain snow."
     replace: "🏔"
   - trigger: ".mount fuji."
@@ -2104,7 +2093,7 @@ matches:
   - trigger: ".camping."
     replace: "🏕"
   - trigger: ".tent."
-    replace: ⛺️
+    replace: "⛺️"
   - trigger: ".railway track."
     replace: "🛤"
   - trigger: ".motorway."
@@ -2146,7 +2135,7 @@ matches:
   - trigger: ".classical building."
     replace: "🏛"
   - trigger: ".church."
-    replace: ⛪️
+    replace: "⛪️"
   - trigger: ".mosque."
     replace: "🕌"
   - trigger: ".synagogue."
@@ -2154,7 +2143,7 @@ matches:
   - trigger: ".kaaba."
     replace: "🕋"
   - trigger: ".shinto shrine."
-    replace: ⛩
+    replace: "⛩"
   - trigger: ".japan."
     replace: "🗾"
   - trigger: ".rice scene."
@@ -2191,10 +2180,12 @@ matches:
     replace: "🌁"
   - trigger: ".karl."
     replace: "🌁"
+
+# Objects
   - trigger: ".watch."
-    replace: ⌚️
+    replace: "⌚️"
   - trigger: ".time."
-    replace: ⌚️
+    replace: "⌚️"
   - trigger: ".iphone."
     replace: "📱"
   - trigger: ".smartphone."
@@ -2214,7 +2205,7 @@ matches:
   - trigger: ".screen."
     replace: "💻"
   - trigger: ".keyboard."
-    replace: ⌨️
+    replace: "⌨️"
   - trigger: ".desktop computer."
     replace: "🖥"
   - trigger: ".printer."
@@ -2258,11 +2249,11 @@ matches:
   - trigger: ".telephone receiver."
     replace: "📞"
   - trigger: ".phone."
-    replace: ☎️
+    replace: "☎️"
   - trigger: ".telephone."
-    replace: ☎️
+    replace: "☎️"
   - trigger: ".phone."
-    replace: ☎️
+    replace: "☎️"
   - trigger: ".pager."
     replace: "📟"
   - trigger: ".fax."
@@ -2280,19 +2271,19 @@ matches:
   - trigger: ".control knobs."
     replace: "🎛"
   - trigger: ".stopwatch."
-    replace: ⏱
+    replace: "⏱"
   - trigger: ".timer clock."
-    replace: ⏲
+    replace: "⏲"
   - trigger: ".alarm clock."
-    replace: ⏰
+    replace: "⏰"
   - trigger: ".morning."
-    replace: ⏰
+    replace: "⏰"
   - trigger: ".mantelpiece clock."
     replace: "🕰"
   - trigger: ".hourglass."
-    replace: ⌛️
+    replace: "⌛️"
   - trigger: ".hourglass flowing sand."
-    replace: ⏳
+    replace: "⏳"
   - trigger: ".satellite."
     replace: "📡"
   - trigger: ".signal."
@@ -2342,7 +2333,7 @@ matches:
   - trigger: ".diamond."
     replace: "💎"
   - trigger: ".balance scale."
-    replace: ⚖️
+    replace: "⚖️"
   - trigger: ".wrench."
     replace: "🔧"
   - trigger: ".tool."
@@ -2350,17 +2341,17 @@ matches:
   - trigger: ".hammer."
     replace: "🔨"
   - trigger: ".hammer and pick."
-    replace: ⚒
+    replace: "⚒"
   - trigger: ".hammer and wrench."
     replace: "🛠"
   - trigger: ".pick."
-    replace: ⛏
+    replace: "⛏"
   - trigger: ".nut and bolt."
     replace: "🔩"
   - trigger: ".gear."
-    replace: ⚙️
+    replace: "⚙️"
   - trigger: ".chains."
-    replace: ⛓
+    replace: "⛓"
   - trigger: ".gun."
     replace: "🔫"
   - trigger: ".shoot."
@@ -2382,7 +2373,7 @@ matches:
   - trigger: ".dagger."
     replace: "🗡"
   - trigger: ".crossed swords."
-    replace: ⚔️
+    replace: "⚔️"
   - trigger: ".shield."
     replace: "🛡"
   - trigger: ".smoking."
@@ -2390,11 +2381,11 @@ matches:
   - trigger: ".cigarette."
     replace: "🚬"
   - trigger: ".coffin."
-    replace: ⚰️
+    replace: "⚰️"
   - trigger: ".funeral."
-    replace: ⚰️
+    replace: "⚰️"
   - trigger: ".funeral urn."
-    replace: ⚱️
+    replace: "⚱️"
   - trigger: ".amphora."
     replace: "🏺"
   - trigger: ".crystal ball."
@@ -2406,7 +2397,7 @@ matches:
   - trigger: ".barber."
     replace: "💈"
   - trigger: ".alembic."
-    replace: ⚗️
+    replace: "⚗️"
   - trigger: ".telescope."
     replace: "🔭"
   - trigger: ".microscope."
@@ -2490,13 +2481,13 @@ matches:
   - trigger: ".wind chime."
     replace: "🎐"
   - trigger: ".email."
-    replace: ✉️
+    replace: "✉️"
   - trigger: ".envelope."
-    replace: ✉️
+    replace: "✉️"
   - trigger: ".letter."
-    replace: ✉️
+    replace: "✉️"
   - trigger: ".email."
-    replace: ✉️
+    replace: "✉️"
   - trigger: ".envelope with arrow."
     replace: "📩"
   - trigger: ".incoming envelope."
@@ -2628,13 +2619,13 @@ matches:
   - trigger: ".round pushpin."
     replace: "📍"
   - trigger: ".scissors."
-    replace: ✂️
+    replace: "✂️"
   - trigger: ".pen."
     replace: "🖊"
   - trigger: ".fountain pen."
     replace: "🖋"
   - trigger: ".black nib."
-    replace: ✒️
+    replace: "✒️"
   - trigger: ".paintbrush."
     replace: "🖌"
   - trigger: ".crayon."
@@ -2648,7 +2639,7 @@ matches:
   - trigger: ".memo."
     replace: "📝"
   - trigger: ".pencil2."
-    replace: ✏️
+    replace: "✏️"
   - trigger: ".mag."
     replace: "🔍"
   - trigger: ".search."
@@ -2669,8 +2660,10 @@ matches:
     replace: "🔒"
   - trigger: ".unlock."
     replace: "🔓"
+
+# Symbols
   - trigger: ".heart."
-    replace: ❤️
+    replace: "❤️"
   - trigger: ".yellow heart."
     replace: "💛"
   - trigger: ".green heart."
@@ -2684,7 +2677,7 @@ matches:
   - trigger: ".broken heart."
     replace: "💔"
   - trigger: ".heavy heart exclamation."
-    replace: ❣️
+    replace: "❣️"
   - trigger: ".two hearts."
     replace: "💕"
   - trigger: ".revolving hearts."
@@ -2704,63 +2697,63 @@ matches:
   - trigger: ".heart decoration."
     replace: "💟"
   - trigger: ".peace symbol."
-    replace: ☮️
+    replace: "☮️"
   - trigger: ".latin cross."
-    replace: ✝️
+    replace: "✝️"
   - trigger: ".star and crescent."
-    replace: ☪️
+    replace: "☪️"
   - trigger: ".om."
     replace: "🕉"
   - trigger: ".wheel of dharma."
-    replace: ☸️
+    replace: "☸️"
   - trigger: ".star of david."
-    replace: ✡️
+    replace: "✡️"
   - trigger: ".six pointed star."
     replace: "🔯"
   - trigger: ".menorah."
     replace: "🕎"
   - trigger: ".yin yang."
-    replace: ☯️
+    replace: "☯️"
   - trigger: ".orthodox cross."
-    replace: ☦️
+    replace: "☦️"
   - trigger: ".place of worship."
     replace: "🛐"
   - trigger: ".ophiuchus."
-    replace: ⛎
+    replace: "⛎"
   - trigger: ".aries."
-    replace: ♈️
+    replace: "♈️"
   - trigger: ".taurus."
-    replace: ♉️
+    replace: "♉️"
   - trigger: ".gemini."
-    replace: ♊️
+    replace: "♊️"
   - trigger: ".cancer."
-    replace: ♋️
+    replace: "♋️"
   - trigger: ".leo."
-    replace: ♌️
+    replace: "♌️"
   - trigger: ".virgo."
-    replace: ♍️
+    replace: "♍️"
   - trigger: ".libra."
-    replace: ♎️
+    replace: "♎️"
   - trigger: ".scorpius."
-    replace: ♏️
+    replace: "♏️"
   - trigger: ".sagittarius."
-    replace: ♐️
+    replace: "♐️"
   - trigger: ".capricorn."
-    replace: ♑️
+    replace: "♑️"
   - trigger: ".aquarius."
-    replace: ♒️
+    replace: "♒️"
   - trigger: ".pisces."
-    replace: ♓️
+    replace: "♓️"
   - trigger: ".id."
     replace: "🆔"
   - trigger: ".atom symbol."
-    replace: ⚛️
+    replace: "⚛️"
   - trigger: ".accept."
     replace: "🉑"
   - trigger: ".radioactive."
-    replace: ☢️
+    replace: "☢️"
   - trigger: ".biohazard."
-    replace: ☣️
+    replace: "☣️"
   - trigger: ".mobile phone off."
     replace: "📴"
   - trigger: ".off."
@@ -2777,8 +2770,10 @@ matches:
     replace: "🈺"
   - trigger: ".u6708."
     replace: "🈷️"
+  - trigger: ".u6307."
+    replace: "🈯️"
   - trigger: ".eight pointed black star."
-    replace: ✴️
+    replace: "✴️"
   - trigger: ".vs."
     replace: "🆚"
   - trigger: ".white flower."
@@ -2786,9 +2781,9 @@ matches:
   - trigger: ".ideograph advantage."
     replace: "🉐"
   - trigger: ".secret."
-    replace: ㊙️
+    replace: "㊙️"
   - trigger: ".congratulations."
-    replace: ㊗️
+    replace: "㊗️"
   - trigger: ".u5408."
     replace: "🈴"
   - trigger: ".u6e80."
@@ -2812,15 +2807,15 @@ matches:
   - trigger: ".help."
     replace: "🆘"
   - trigger: ".x."
-    replace: ❌
+    replace: "❌"
   - trigger: ".o."
-    replace: ⭕️
+    replace: "⭕️"
   - trigger: ".stop sign."
     replace: "🛑"
   - trigger: ".no entry."
-    replace: ⛔️
+    replace: "⛔️"
   - trigger: ".limit."
-    replace: ⛔️
+    replace: "⛔️"
   - trigger: ".name badge."
     replace: "📛"
   - trigger: ".no entry sign."
@@ -2832,7 +2827,7 @@ matches:
   - trigger: ".anger."
     replace: "💢"
   - trigger: ".hotsprings."
-    replace: ♨️
+    replace: "♨️"
   - trigger: ".no pedestrians."
     replace: "🚷"
   - trigger: ".do not litter."
@@ -2848,57 +2843,53 @@ matches:
   - trigger: ".no smoking."
     replace: "🚭"
   - trigger: ".exclamation."
-    replace: ❗️
+    replace: "❗️"
   - trigger: ".heavy exclamation mark."
-    replace: ❗️
+    replace: "❗️"
   - trigger: ".bang."
-    replace: ❗️
+    replace: "❗️"
   - trigger: ".exclamation."
-    replace: ❗️
+    replace: "❗️"
   - trigger: ".grey exclamation."
-    replace: ❕
+    replace: "❕"
   - trigger: ".question."
-    replace: ❓
+    replace: "❓"
   - trigger: ".grey question."
-    replace: ❔
+    replace: "❔"
   - trigger: ".bangbang."
-    replace: ‼️
+    replace: "‼️"
   - trigger: ".interrobang."
-    replace: ⁉️
+    replace: "⁉️"
   - trigger: ".low brightness."
     replace: "🔅"
   - trigger: ".high brightness."
     replace: "🔆"
   - trigger: ".part alternation mark."
-    replace: 〽️
+    replace: "〽️"
   - trigger: ".warning."
-    replace: ⚠️
+    replace: "⚠️"
   - trigger: ".children crossing."
     replace: "🚸"
   - trigger: ".trident."
     replace: "🔱"
   - trigger: ".fleur de lis."
-    replace: ⚜️
+    replace: "⚜️"
   - trigger: ".beginner."
     replace: "🔰"
   - trigger: ".recycle."
-    replace: ♻️
+    replace: "♻️"
   - trigger: ".environment."
-    replace: ♻️
-  - trigger: ".check mark button."
-    replace: ✅
-  - trigger: ".u6307."
-    replace: "🈯️"
+    replace: "♻️"
+  - trigger: ".checkedbox."
+    replace: "✅"
   - trigger: ".chart."
     replace: "💹"
   - trigger: ".sparkle."
-    replace: ❇️
+    replace: "❇️"
   - trigger: ".eight spoked asterisk."
-    replace: ✳️
-  - trigger: ".cross mark button."
-    replace: ❎
-  - trigger: ".cross mark."
-    replace: ❌
+    replace: "✳️"
+  - trigger: ".crossedbox."
+    replace: "❎"
   - trigger: ".globe with meridians."
     replace: "🌐"
   - trigger: ".global."
@@ -2906,7 +2897,7 @@ matches:
   - trigger: ".diamond shape with a dot inside."
     replace: "💠"
   - trigger: ".m."
-    replace: Ⓜ️
+    replace: "Ⓜ️"
   - trigger: ".cyclone."
     replace: "🌀"
   - trigger: ".swirl."
@@ -2918,9 +2909,9 @@ matches:
   - trigger: ".wc."
     replace: "🚾"
   - trigger: ".wheelchair."
-    replace: ♿️
+    replace: "♿️"
   - trigger: ".accessibility."
-    replace: ♿️
+    replace: "♿️"
   - trigger: ".parking."
     replace: "🅿️"
   - trigger: ".u7a7a."
@@ -2960,7 +2951,7 @@ matches:
   - trigger: ".symbols."
     replace: "🔣"
   - trigger: ".information source."
-    replace: ℹ️
+    replace: "ℹ️"
   - trigger: ".abc."
     replace: "🔤"
   - trigger: ".alphabet."
@@ -2988,25 +2979,25 @@ matches:
   - trigger: ".free."
     replace: "🆓"
   - trigger: ".zero."
-    replace: 0️⃣
+    replace: "0️⃣"
   - trigger: ".one."
-    replace: 1️⃣
+    replace: "1️⃣"
   - trigger: ".two."
-    replace: 2️⃣
+    replace: "2️⃣"
   - trigger: ".three."
-    replace: 3️⃣
+    replace: "3️⃣"
   - trigger: ".four."
-    replace: 4️⃣
+    replace: "4️⃣"
   - trigger: ".five."
-    replace: 5️⃣
+    replace: "5️⃣"
   - trigger: ".six."
-    replace: 6️⃣
+    replace: "6️⃣"
   - trigger: ".seven."
-    replace: 7️⃣
+    replace: "7️⃣"
   - trigger: ".eight."
-    replace: 8️⃣
+    replace: "8️⃣"
   - trigger: ".nine."
-    replace: 9️⃣
+    replace: "9️⃣"
   - trigger: ".keycap ten."
     replace: "🔟"
   - trigger: ".hash."
@@ -3016,63 +3007,63 @@ matches:
   - trigger: ".asterisk."
     replace: "*️⃣"
   - trigger: ".arrow forward."
-    replace: ▶️
+    replace: "▶️"
   - trigger: ".pause button."
-    replace: ⏸
+    replace: "⏸"
   - trigger: ".play or pause button."
-    replace: ⏯
+    replace: "⏯"
   - trigger: ".stop button."
-    replace: ⏹
+    replace: "⏹"
   - trigger: ".record button."
-    replace: ⏺
+    replace: "⏺"
   - trigger: ".next track button."
-    replace: ⏭
+    replace: "⏭"
   - trigger: ".previous track button."
-    replace: ⏮
+    replace: "⏮"
   - trigger: ".fast forward."
-    replace: ⏩
+    replace: "⏩"
   - trigger: ".rewind."
-    replace: ⏪
+    replace: "⏪"
   - trigger: ".arrow double up."
-    replace: ⏫
+    replace: "⏫"
   - trigger: ".arrow double down."
-    replace: ⏬
+    replace: "⏬"
   - trigger: ".arrow backward."
-    replace: ◀️
+    replace: "◀️"
   - trigger: ".arrow up small."
     replace: "🔼"
   - trigger: ".arrow down small."
     replace: "🔽"
   - trigger: ".arrow right."
-    replace: ➡️
+    replace: "➡️"
   - trigger: ".arrow left."
-    replace: ⬅️
+    replace: "⬅️"
   - trigger: ".arrow up."
-    replace: ⬆️
+    replace: "⬆️"
   - trigger: ".arrow down."
-    replace: ⬇️
+    replace: "⬇️"
   - trigger: ".arrow upper right."
-    replace: ↗️
+    replace: "↗️"
   - trigger: ".arrow lower right."
-    replace: ↘️
+    replace: "↘️"
   - trigger: ".arrow lower left."
-    replace: ↙️
+    replace: "↙️"
   - trigger: ".arrow upper left."
-    replace: ↖️
+    replace: "↖️"
   - trigger: ".arrow up down."
-    replace: ↕️
+    replace: "↕️"
   - trigger: ".left right arrow."
-    replace: ↔️
+    replace: "↔️"
   - trigger: ".arrow right hook."
-    replace: ↪️
+    replace: "↪️"
   - trigger: ".leftwards arrow with hook."
-    replace: ↩️
+    replace: "↩️"
   - trigger: ".return."
-    replace: ↩️
+    replace: "↩️"
   - trigger: ".arrow heading up."
-    replace: ⤴️
+    replace: "⤴️"
   - trigger: ".arrow heading down."
-    replace: ⤵️
+    replace: "⤵️"
   - trigger: ".twisted rightwards arrows."
     replace: "🔀"
   - trigger: ".shuffle."
@@ -3092,31 +3083,31 @@ matches:
   - trigger: ".notes."
     replace: "🎶"
   - trigger: ".heavy plus sign."
-    replace: ➕
+    replace: "➕"
   - trigger: ".heavy minus sign."
-    replace: ➖
+    replace: "➖"
   - trigger: ".heavy division sign."
-    replace: ➗
+    replace: "➗"
   - trigger: ".heavy multiplication x."
-    replace: ✖️
+    replace: "✖️"
   - trigger: ".heavy dollar sign."
     replace: "💲"
   - trigger: ".currency exchange."
     replace: "💱"
   - trigger: ".tm."
-    replace: ™️
+    replace: "™️"
   - trigger: ".trademark."
-    replace: ™️
+    replace: "™️"
   - trigger: ".copyright."
-    replace: ©️
+    replace: "©️"
   - trigger: ".registered."
-    replace: ®️
+    replace: "®️"
   - trigger: ".wavy dash."
-    replace: 〰️
+    replace: "〰️"
   - trigger: ".curly loop."
-    replace: ➰
+    replace: "➰"
   - trigger: ".loop."
-    replace: ➿
+    replace: "➿"
   - trigger: ".end."
     replace: "🔚"
   - trigger: ".back."
@@ -3127,16 +3118,16 @@ matches:
     replace: "🔝"
   - trigger: ".soon."
     replace: "🔜"
-  - trigger: ".check mark."
-    replace: ✔️
-  - trigger: ".ballot box with check."
-    replace: ☑️
+  - trigger: ".tickmark."
+    replace: "✔️"
+  - trigger: ".tickbox."
+    replace: "☑️"
   - trigger: ".radio button."
     replace: "🔘"
   - trigger: ".white circle."
-    replace: ⚪️
+    replace: "⚪️"
   - trigger: ".black circle."
-    replace: ⚫️
+    replace: "⚫️"
   - trigger: ".red circle."
     replace: "🔴"
   - trigger: ".large blue circle."
@@ -3158,21 +3149,21 @@ matches:
   - trigger: ".black square button."
     replace: "🔲"
   - trigger: ".black small square."
-    replace: ▪️
+    replace: "▪️"
   - trigger: ".white small square."
-    replace: ▫️
+    replace: "▫️"
   - trigger: ".black medium small square."
-    replace: ◾️
+    replace: "◾️"
   - trigger: ".white medium small square."
-    replace: ◽️
+    replace: "◽️"
   - trigger: ".black medium square."
-    replace: ◼️
+    replace: "◼️"
   - trigger: ".white medium square."
-    replace: ◻️
+    replace: "◻️"
   - trigger: ".black large square."
-    replace: ⬛️
+    replace: "⬛️"
   - trigger: ".white large square."
-    replace: ⬜️
+    replace: "⬜️"
   - trigger: ".speaker."
     replace: "🔈"
   - trigger: ".mute."
@@ -3206,13 +3197,13 @@ matches:
   - trigger: ".right anger bubble."
     replace: "🗯"
   - trigger: ".spades."
-    replace: ♠️
+    replace: "♠️"
   - trigger: ".clubs."
-    replace: ♣️
+    replace: "♣️"
   - trigger: ".hearts."
-    replace: ♥️
+    replace: "♥️"
   - trigger: ".diamonds."
-    replace: ♦️
+    replace: "♦️"
   - trigger: ".black joker."
     replace: "🃏"
   - trigger: ".flower playing cards."
@@ -3267,6 +3258,8 @@ matches:
     replace: "🕦"
   - trigger: ".clock1230."
     replace: "🕧"
+
+# Flags
   - trigger: ".white flag."
     replace: "🏳️"
   - trigger: ".black flag."
