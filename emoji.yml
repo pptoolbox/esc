@@ -214,6 +214,8 @@ matches:
     replace: "🙄"
   - trigger: ".thinking."
     replace: "🤔"
+  - trigger: ".what."
+    replace: "🤨"
   - trigger: ".lying face."
     replace: "🤥"
   - trigger: ".liar."
